@@ -70,3 +70,30 @@ WHERE Edition = 'The Last Jedi (Edition VIII)';
 ```
 
 # MODULE 2
+## Types of SQL statements
+### DDL (Data Definition Language)
+It's use to define, change or drop data:
+```
+CREATE
+ALTER
+TRUNCATE
+DROP
+```
+### DML (Data Manipulation Language)
+It's use to read and modify data:
+```
+INSERT
+SELECT
+UPDATE
+DELETE
+```
+## CREATE TABLE statements
+To create a table, it's necessary to define the column name plus datatypes:
+```
+CREATE TABLE NFL_Teams(
+  id CHAR(2) PRIMARY KEY NOT NULL,
+  name VARCHAR(24) NOT NULL,
+  city VARCHAR(15) NOT NULL,
+  state VARCHAR(15) NOT NULL
+)
+```
