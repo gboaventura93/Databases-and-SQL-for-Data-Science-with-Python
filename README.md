@@ -97,3 +97,34 @@ CREATE TABLE NFL_Teams(
   state VARCHAR(15) NOT NULL
 )
 ```
+```
+INSERT INTO NFL_Teams VALUES
+	(1, 'Arizona Cardinals', 'Phoenix', 'AZ'),
+	(2, '49ers', 'San Francisco', 'SA');
+```	
+## ALTER, DROP, and Truncate Tables
+- ALTER: Add or remove columns, keys or constraints. It also modifies datatype of columns.
+to add columns:
+```
+ALTER TABLE Movies
+  ADD COLUMN Season CHAR(12);
+```
+to modify datatype of a column:
+```
+ALTER TABLE Movies
+MODIFY Year CHAR(4);
+```
+to drop column:
+```
+ALTER TABLE Movies
+  DROP COLUMN Title;
+```
+to remove the table from the database:
+```
+DROP TABLE Movies;
+```
+- TRUNCATE: It deletes all rows of data in a table
+```
+TRUNCATE TABLE Movies;
+  IMMEDIATE;
+```
