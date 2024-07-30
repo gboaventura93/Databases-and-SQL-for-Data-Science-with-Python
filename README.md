@@ -128,3 +128,5 @@ DROP TABLE Movies;
 TRUNCATE TABLE Movies;
   IMMEDIATE;
 ```
+### e.g. coding on IBM DB2 on Cloud
+![](https://raw.githubusercontent.com/gboaventura93/Databases-and-SQL-for-Data-Science-with-Python/main/assets/Screenshot_IBM_Cloud1.png)
