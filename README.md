@@ -130,3 +130,47 @@ TRUNCATE TABLE Movies;
 ```
 ### e.g. coding on IBM DB2 on Cloud
 ![](https://raw.githubusercontent.com/gboaventura93/Databases-and-SQL-for-Data-Science-with-Python/main/assets/Screenshot_IBM_Cloud1.png)
+
+# MODULE 3
+## String Patterns and Ranges
+To use a *String Pattern*, it's just to use the LIKE + letter(s) + %, _ or both:
+```
+SELECT Title FROM Movies
+WHERE Title LIKE 'S%'
+```
+```
+WHERE Title LIKE 'Star_s'
+```
+```
+WHERE Title LIKE '%Wa_s'
+```
+For *Range*, we can use AND, BETWEEN, OR and IN:
+```
+SELECT Year FROM Movies
+WHERE Year >= 2005 AND Year <=2015
+```
+```
+WHERE Year BETWEEN 2005 AND 2015
+```
+## Sorting Results Sets
+*ORDER BY* will order the selection:
+```
+SELECT Title from Movies
+	ORDER BY Title (ASC [Default] or DESC)
+```
+## Grouping Result Sets
+*DISTINCT* is use to eliminate Duplicates values in the database:
+```
+SELECT DISTINCT(Title) FROM Movies
+```
+*GROUP BY* could be use to count variables:
+```
+SELECT Title, COUNT(Title) FROM Movies
+	GROUP BY Title
+```
+*HAVING* could be use as a kind of condition:
+```
+SELECT Title, COUNT(Title) AS COUNT FROM Movies
+	GROUP BY Title
+	HAVING COUNT(Title) > 2
+```
