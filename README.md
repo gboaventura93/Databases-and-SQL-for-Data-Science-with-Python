@@ -10,12 +10,12 @@ This is my summary from this course that i'm getting by IBM on Coursera
 
 ## SELECT Statment
 SELECT is use to see the data
-```SELECT * from <tablename>``` <b/>
-e.g. let's say that a table called "Movies" has some columns as Title, Edition, Year, .. <b>
-You can select everything: ```SELECT * from Movies```; <b>
+```SELECT * from <tablename>``` <br/>
+e.g. let's say that a table called "Movies" has some columns as Title, Edition, Year, .. <br/>
+You can select everything: ```SELECT * from Movies```; <br/>
 or to specify columns: ```SELECT <Title>,<Year> from Movies```
 ### WHERE
-Where is use to restricts the result set, or as kind of a Filter. <b>
+Where is use to restricts the result set, or as kind of a Filter. <br/>
 It's evaluate to: True, False or Unknown.
 The comparison operators are:
 ```
@@ -241,8 +241,8 @@ WHERE E.DEP_ID = D.DEPT_ID_DEP;
 
 # MODULE 4
 ## DB-API
-Basic concepts related to the Python DB-API and database cursors. </b>
-DB-API is a mechanism to connect Python programs from Jupyter Notebook (e.g.) to a system database as DBMS (e.g.). It allows these two programs to connect by themselves. </b>
+Basic concepts related to the Python DB-API and database cursors. <br/>
+DB-API is a mechanism to connect Python programs from Jupyter Notebook (e.g.) to a system database as DBMS (e.g.). It allows these two programs to connect by themselves. <br/>>
 Basically, we can create on Jupyter Notebook codes connecting the database, manipulating the data, adding new values, deleting, etc. And at some point we can save in a dataframe to manipulate them, using Python, as data visualization by matplotlib or another Python libraries.
 ### Consepts of the Python DB API
 Basic exists two consepts:
@@ -274,7 +274,7 @@ e.g.:
 .close()
 ```
 ### How to code using DB-API
-[Example](https://github.com/gboaventura93/Databases-and-SQL-for-Data-Science-with-Python/tree/main/sql_python_module4) </b>
+[Example](https://github.com/gboaventura93/Databases-and-SQL-for-Data-Science-with-Python/tree/main/sql_python_module4) <br/>
 1st. import database
 ```
 from dbmodule import connect
