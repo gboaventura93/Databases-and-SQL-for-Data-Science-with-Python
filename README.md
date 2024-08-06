@@ -238,17 +238,64 @@ SELECT * FROM Employees, Departments;
 SELECT * FROM Employees E, Departments D
 WHERE E.DEP_ID = D.DEPT_ID_DEP;
 ```
------Some Exercises at [Skills Network](https://author-ide.skills.network/render?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZF9pbnN0cnVjdGlvbnNfdXJsIjoiaHR0cHM6Ly9jZi1jb3Vyc2VzLWRhdGEuczMudXMuY2xvdWQtb2JqZWN0LXN0b3JhZ2UuYXBwZG9tYWluLmNsb3VkL0lCTURldmVsb3BlclNraWxsc05ldHdvcmstREIwMjAxRU4tU2tpbGxzTmV0d29yay9sYWJzL0xhYnNfQ291cnNlcmFfVjUvbGFicy9MYWIlMjAtJTIwU3ViLXF1ZXJpZXMlMjBhbmQlMjBOZXN0ZWQlMjBTRUxFQ1RzJTIwL2luc3RydWN0aW9uYWwtbGFicy5tZCIsInRvb2xfdHlwZSI6Imluc3RydWN0aW9uYWwtbGFiIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE3MjIzMjU5Njh9.n8uZv5cOzknb0YoOCCi1URie3Dlz2Nf2RuodG5nxKqo)-----
-1. Execute a working query using a sub-select to retrieve all employees records whose salary is lower than the average salary.
-2. Execute a Column Expression that retrieves all employees records with EMP_ID, SALARY and maximum salary as MAX_SALARY in every row.
-3. Execute a Table Expression for the EMPLOYEES table that excludes columns with sensitive employee data (i.e. does not include columns: SSN, B_DATE, SEX, ADDRESS, SALARY).
-4. Retrieve only the EMPLOYEES records that correspond to jobs in the JOBS table.
-5. Retrieve only the list of employees whose JOB_TITLE is Jr. Designer.
-6. Retrieve JOB information and who earn more than $70,000.
-7. Retrieve JOB information and whose birth year is after 1976.
-8. Retrieve JOB information for female employees whose birth year is after 1976.
 
+# MODULE 4
+## DB-API
+Basic concepts related to the Python DB-API and database cursors. </b>
+DB-API is a mechanism to connect Python programs from Jupyter Notebook (e.g.) to a system database as DBMS (e.g.). It allows these two programs to connect by themselves. </b>
+Basically, we can create on Jupyter Notebook codes connecting the database, manipulating the data, adding new values, deleting, etc. And at some point we can save in a dataframe to manipulate them, using Python, as data visualization by matplotlib or another Python libraries.
+### Consepts of the Python DB API
+Basic exists two consepts:
+*Connection Objects*
+- Database connections
+- Manage transactions
+e.g.:
+```
+.cursor()
+.commit()
+.rollback()
+.close()
+```
 
+*Cursor Objects*
+- Database Queries
+- Scroll through result set
+- Retrieve results.
+e.g.:
+```
+.callproc()
+.execute()
+.executemany()
+.fetchone()
+.fetchmany()
+.fetchall()
+.nextset()
+.arraysize()
+.close()
+```
+### How to code using DB-API
+1st. import database
+```
+from dbmodule import connect
+```
+2nd. Create connection object
+```
+Connection = connect('databasename', 'username', 'pswd')
+```
+3rd. Create a cursor object
+```
+Cursor = connection.cursor()
+```
+4th. Run Queries
+```
+Cursor.execute('SELECT * FROM MYTABLE')
+Results = cursor.fetchall()
+```
+5th. Free resources
+```
+Cursor.close()
+Connection.close()
+```
 
 
 
