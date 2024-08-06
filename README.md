@@ -274,6 +274,7 @@ e.g.:
 .close()
 ```
 ### How to code using DB-API
+[Example](https://github.com/gboaventura93/Databases-and-SQL-for-Data-Science-with-Python/tree/main/sql_python_module4) </b>
 1st. import database
 ```
 from dbmodule import connect
