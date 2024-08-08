@@ -298,6 +298,23 @@ Cursor.close()
 Connection.close()
 ```
 
+## SQL Magic
+Magic commands are special commands which provide special functionalities
+It has two types of Cell Magics:
+*Line Magics*: Prefixed with '%' and operate on a single line;
+*Cell Magics*: Prefixed with '%%' and operate on multiple lines.
+Statments:
+```
+%pwd: print the current working directory
+%ls: lists all files
+%history: shows the command history
+%reset: removing all names defined by the user
+%who: list variables in the namespace
+%whos: list variables with details in th e namespace
+%matplotlib inline: makes matplotlib plots appear within the notebook
+%timeit: execution time
+%lsmagic: list all available line magics
+```
 
 
 
