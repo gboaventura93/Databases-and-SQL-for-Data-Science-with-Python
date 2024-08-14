@@ -1,5 +1,5 @@
 # Databases-and-SQL-for-Data-Science-with-Python
-This is my summary from this course that i'm getting by IBM on Coursera 
+This is my summary from this course that I got by IBM on Coursera 
 # MODULE 1
 ## Basic SQL Commands
 - Create a table
